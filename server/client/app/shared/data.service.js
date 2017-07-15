@@ -1,7 +1,7 @@
 app.service('DataService', DataService);
 
 function DataService ($http) {
-  const host = 'http://localhost:3000';
+  const host = 'http://34.211.5.125';
   this.POST = (endpoint, params) => {
     return $http({
       method: 'POST',
