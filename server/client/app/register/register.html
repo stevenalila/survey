@@ -1,0 +1,65 @@
+<div class="row">
+  <h1 class="text-center">Register</h1>
+  <div class="col col-md-6 col-md-offset-3">
+    <!-- Errors panel -->
+    <div class="alert alert-danger" role="alert" ng-show="register.errors.length > 0">
+      <ul>
+        <li ng-repeat="error in register.errors">{{ error }}</li>
+      </ul>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <form ng-submit="register.submit()">
+          <!-- Email -->
+          <p>
+            <div class="input-group">
+              <span class="input-group-addon">E-mail</span>
+              <input ng-model="register.inputs.email" type="email" class="form-control" placeholder="E-mail" aria-describedby="basic-addon1">
+            </div>
+          </p>
+          <!-- Password -->
+          <p>
+            <div class="input-group">
+              <span class="input-group-addon">Password</span>
+              <input ng-model="register.inputs.password" type="password" class="form-control" placeholder="Password" aria-describedby="basic-addon1">
+            </div>
+          </p>
+          <!-- Password Confirm -->
+          <p>
+            <div class="input-group">
+              <span class="input-group-addon">Password Confirm</span>
+              <input ng-model="register.inputs.password_confirm" type="password" class="form-control" placeholder="Password Confirm" aria-describedby="basic-addon1">
+            </div>
+          </p>
+          <!-- Firstname -->
+          <p>
+            <div class="input-group">
+              <span class="input-group-addon">Firstname</span>
+              <input ng-model="register.inputs.firstname" type="text" class="form-control" placeholder="Firstname" aria-describedby="basic-addon1">
+            </div>
+          </p>
+          <!-- Lastname -->
+          <p>
+            <div class="input-group">
+              <span class="input-group-addon">Lastname</span>
+              <input ng-model="register.inputs.lastname" type="text" class="form-control" placeholder="Lastname" aria-describedby="basic-addon1">
+            </div>
+          </p>
+          <!-- Birthday -->
+          <p>
+            <div class="input-group">
+              <span class="input-group-addon">Birthday</span>
+              <input ng-model="register.inputs.birthday" type="date" class="form-control" placeholder="Birthday" aria-describedby="basic-addon1">
+            </div>
+          </p>
+
+          <!-- Submit button -->
+          <button type="submit" class="btn btn-success pull-right">
+            Register
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

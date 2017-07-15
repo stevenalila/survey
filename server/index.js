@@ -13,6 +13,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/users', require('./users/users.js'));
 app.use('/polls', require('./polls/polls.js'));
 
+app.use(express.static(path.join(__dirname, 'client')));
+
 app.listen(3000, () => {
   console.log('Server running on port 3000...');
 

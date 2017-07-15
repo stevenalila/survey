@@ -1,0 +1,49 @@
+<h1>{{ poll.poll.question }}</h1>
+<a ui-sref="polls">Go to polls</a>
+<p>
+  Click the vote button to choose one.
+</p>
+
+<hr/>
+
+<table class="table">
+  <thead>
+    <th>Option</th>
+    <th>Votes</th>
+    <th>Action</th>
+  </thead>
+  <tbody>
+    <!-- Option 1 -->
+    <tr>
+      <td>{{ poll.poll.options.option_1.text }}</td>
+      <td>{{ poll.poll.options.option_1.votes }}</td>
+      <td>
+        <button class="btn btn-sm btn-success" ng-click="poll.vote(1)">Vote</button>
+      </td>
+    </tr>
+    <!-- Option 2 -->
+    <tr>
+      <td>{{ poll.poll.options.option_2.text }}</td>
+      <td>{{ poll.poll.options.option_2.votes }}</td>
+      <td>
+        <button class="btn btn-sm btn-success" ng-click="poll.vote(2)">Vote</button>
+      </td>
+    </tr>
+    <!-- Option 3 -->
+    <tr>
+      <td>{{ poll.poll.options.option_3.text }}</td>
+      <td>{{ poll.poll.options.option_3.votes }}</td>
+      <td>
+        <button class="btn btn-sm btn-success" ng-click="poll.vote(3)">Vote</button>
+      </td>
+    </tr>
+    <!-- Option 4 -->
+    <tr>
+      <td>{{ poll.poll.options.option_4.text }}</td>
+      <td>{{ poll.poll.options.option_4.votes }}</td>
+      <td>
+        <button class="btn btn-sm btn-success" ng-click="poll.vote(4)">Vote</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

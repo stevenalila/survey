@@ -1,0 +1,30 @@
+<h1>Current polls</h1>
+
+<hr/>
+
+<input class="pull-right" type="text" placeholder="Search" ng-model="polls.search">
+
+<table class="table">
+  <thead>
+    <th>Name</th>
+    <th>Survey question</th>
+    <th>Date</th>
+    <th>Action</th>
+  </thead>
+  <tbody>
+    <tr ng-repeat="poll in polls.polls track by $index" ng-show="polls.searchFilter(poll.question)">
+      <td><a ng-click="polls.goToPoll(poll.id)">{{ poll.fullname }}</a></td>
+      <td>{{ poll.question }}</td>
+      <td>{{ poll.date | date }}</td>
+      <td>
+        <button class="btn btn-sm btn-danger"
+                ng-if="polls.email === poll.email"
+                ng-click="polls.removePoll(poll.id, $index)">
+          Remove
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<button class="btn btn-primary pull-right" ui-sref="create">Create a poll</button>
